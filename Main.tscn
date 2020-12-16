@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://space.jpg" type="Texture" id=1]
+[ext_resource path="res://Rocket.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Alien.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Main.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+alien = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rocket" parent="." instance=ExtResource( 2 )]
+position = Vector2( 164.28, 356.283 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,39 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://Bullet.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Rocket",
+"language": "GDScript",
+"path": "res://Rocket.gd"
+} ]
+_global_script_class_icons={
+"Bullet": "",
+"Rocket": ""
+}
+
+[application]
+
+config/name="Space-Invader-Athif"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Events="*res://Events.gd"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
