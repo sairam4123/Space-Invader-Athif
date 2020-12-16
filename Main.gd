@@ -9,6 +9,7 @@ export(PackedScene) var alien
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	Events.connect("game_ended", self, "_game_ended")
 	var screen_size = get_viewport_rect()
 	for i in range(8):
