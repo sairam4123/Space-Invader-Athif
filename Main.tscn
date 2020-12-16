@@ -10,10 +10,11 @@ script = ExtResource( 4 )
 alien = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 texture = ExtResource( 1 )
 expand = true
+stretch_mode = 7
 __meta__ = {
 "_edit_use_anchors_": false
 }
